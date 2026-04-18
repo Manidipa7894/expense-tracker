@@ -1,0 +1,79 @@
+.dashboard { max-width: 1100px; }
+
+.page-header { margin-bottom: 28px; }
+.page-header h1 { font-size: 26px; font-weight: 700; color: #e8e8f0; }
+.page-header p { font-size: 14px; color: #8888aa; margin-top: 4px; }
+
+.stat-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  background: #13131a;
+  border: 1px solid #1e1e2e;
+  border-radius: 12px;
+  padding: 20px 24px;
+  display: flex; flex-direction: column; gap: 8px;
+  transition: border-color 0.2s;
+}
+.stat-card:hover { border-color: #3a3a50; }
+.stat-card.balance { border-top: 2px solid #6c63ff; }
+.stat-card.income { border-top: 2px solid #10b981; }
+.stat-card.expense { border-top: 2px solid #ef4444; }
+
+.stat-label { font-size: 12px; color: #8888aa; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; }
+.stat-value { font-size: 28px; font-weight: 700; color: #e8e8f0; }
+.stat-card.income .stat-value { color: #10b981; }
+.stat-card.expense .stat-value { color: #ef4444; }
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.chart-card {
+  background: #13131a;
+  border: 1px solid #1e1e2e;
+  border-radius: 12px;
+  padding: 20px 24px;
+}
+.chart-card h3 { font-size: 14px; font-weight: 600; color: #c0c0d8; margin-bottom: 20px; }
+
+.empty-chart { color: #8888aa; font-size: 14px; text-align: center; padding: 40px 0; }
+
+.recent-card {
+  background: #13131a;
+  border: 1px solid #1e1e2e;
+  border-radius: 12px;
+  padding: 20px 24px;
+}
+.recent-card h3 { font-size: 14px; font-weight: 600; color: #c0c0d8; margin-bottom: 16px; }
+
+.recent-list { display: flex; flex-direction: column; gap: 2px; }
+.recent-item {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #1a1a26;
+}
+.recent-item:last-child { border-bottom: none; }
+
+.recent-left { display: flex; align-items: center; gap: 12px; }
+.category-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+.recent-title { font-size: 14px; font-weight: 500; color: #e8e8f0; }
+.recent-meta { font-size: 12px; color: #8888aa; margin-top: 2px; }
+.recent-amount { font-size: 14px; font-weight: 600; }
+.recent-amount.income { color: #10b981; }
+.recent-amount.expense { color: #ef4444; }
+
+.empty-state { color: #8888aa; font-size: 14px; text-align: center; padding: 40px 0; }
+.loading { color: #8888aa; font-size: 16px; padding: 60px; text-align: center; }
+
+@media (max-width: 768px) {
+  .stat-cards { grid-template-columns: 1fr; }
+  .charts-grid { grid-template-columns: 1fr; }
+}
